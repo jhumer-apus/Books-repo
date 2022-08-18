@@ -20,8 +20,8 @@ class BooksController extends Controller
         ]);
 
         $book = new Books;
-        $book->name=$req->name;
-        $result=$book->save();
+        $book->name = $req->name;
+        $result = $book -> save();
         
         if($result){
             return response('Data has been saved', 200);
@@ -63,7 +63,7 @@ class BooksController extends Controller
         $books = DB::table('books')->get();
 
         if(count($books)>0){
-            return response($books, 200);
+            return response()->json($book);
         }
         else{
             return response("No data", 404);
@@ -74,7 +74,7 @@ class BooksController extends Controller
     public function show_id($id){
 
         $book = DB::table('books')->where('id', $id)->get();
-        return response($book, 200);
+        return response()->json($book);
         
     }
 }
