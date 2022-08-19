@@ -1,11 +1,26 @@
 <template>
-  <div class="p-20">
-    <h1 class="text-3xl text-center">About Us</h1>
+  <div>
+    <Header />
+    <SideNav />
+    <h1 class="text-3xl text-center mt-20">About Us</h1>
+    <Body />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from '~/components/Header.vue';
+import Footer from '~/components/Footer.vue';
+import SideNav from '~/components/SideNav.vue';
+import Body from '~/components/Body.vue';
+
 export default {
+    components:{
+    Header,
+    SideNav,
+    Body,
+    Footer
+}
 
 }
 </script>
