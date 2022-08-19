@@ -63,7 +63,7 @@ class BooksController extends Controller
         $books = DB::table('books')->get();
 
         if(count($books)>0){
-            return response()->json($book);
+            return response()->json($books);
         }
         else{
             return response("No data", 404);
