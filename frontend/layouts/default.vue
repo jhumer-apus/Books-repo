@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div class="flex flex-col">
     <Header />
     <SideNav />
-    <nuxt />
     <Body />
     <Footer />
   </div>
@@ -26,5 +25,10 @@ export default {
 </script>
 
 <style>
+body{
+  @apply bg-gray-100
+}
+
+
 
 </style>

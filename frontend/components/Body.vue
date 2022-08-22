@@ -1,15 +1,15 @@
 <template>
-  <body>
-    
-  </body>
+  <div class="w-screen">
+      <Nuxt />
+  </div>
 </template>
 
 <script>
 export default {
-    name:'Body'
+    name:'Body',
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

@@ -62,18 +62,16 @@ class BooksController extends Controller
     public function show(){
         $books = DB::table('books')->get();
 
-        if(count($books)>0){
-            return response()->json($books);
-        }
-        else{
-            return response("No data", 404);
-        }
+       
+        return response()->json($books);
+    
+        
     }
     
     //show specific book
-    public function show_id($id){
+    public function show_name($name){
 
-        $book = DB::table('books')->where('id', $id)->get();
+        $book = DB::table('books')->where('name', $name)->get();
         return response()->json($book);
         
     }

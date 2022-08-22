@@ -27,7 +27,7 @@ Route::delete('/books/{id}', [BooksController::class, 'delete']);
 
 Route::get('/books', [BooksController::class, 'show']);
 
-Route::get('/books/{id}', [BooksController::class, 'show_id']);
+Route::get('/books/{name}', [BooksController::class, 'show_name']);
 
 
 

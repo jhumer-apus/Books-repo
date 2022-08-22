@@ -2,10 +2,10 @@
   <header class="bg-black h-36 w-screen">
     <ul>
         <li>
-            <nuxt-link to="/books">Books</nuxt-link>
+            <nuxt-link class="hover:text-blue-200" to="/books">Books</nuxt-link>
         </li>
         <li>
-            <nuxt-link to="/aboutus">About Us</nuxt-link>
+            <nuxt-link class="hover:text-blue-200" to="/aboutus">About Us</nuxt-link>
         </li>
     </ul>
   </header>

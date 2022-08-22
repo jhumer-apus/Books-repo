@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-yellow-500">
     
   </div>
 </template>
