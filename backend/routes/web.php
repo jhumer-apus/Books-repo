@@ -13,3 +13,7 @@ use App\Http\Controllers\BooksController;
 |
 */
 
+
+Route::get('/greet', function () {
+    return 'Hello World';
+});

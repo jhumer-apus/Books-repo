@@ -11,7 +11,7 @@
 
 <script>
 import Book from '~/components/Book.vue';
-import axios from "axios";
+import axios from 'axios'
 import SearchBar from '../../components/SearchBar.vue';
 import AddBook from '~/components/AddBook.vue';
 
@@ -39,7 +39,7 @@ export default {
       getData: async function(){
         try{
 
-          const res = await axios.get("http://127.0.0.1:8000/api/books")
+          const res = await axios.get("/books")
           this.books = res.data
 
         }catch(err){
