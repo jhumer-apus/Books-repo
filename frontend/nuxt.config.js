@@ -38,7 +38,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -46,7 +47,9 @@ export default {
   },
 
   axios: {
-    baseURL: 'http://127.0.0.1:8000/api' // Used as fallback if no runtime config is provided
+    baseURL: 'http://127.0.0.1:8000/api', // Used as fallback if no runtime config is provided
+    credentials: true,
+    proxy: true,  
   },
 
   publicRuntimeConfig: {
@@ -60,6 +63,23 @@ export default {
       baseURL: 'http://127.0.0.1:8000/api'
     }
   },
-  
+
+  auth: {
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: 'http://localhost:8000',
+        endpoints: {
+          login:{
+            url:'/api/login'
+          }
+        }
+      },
+    },
+  },
+
+  router: {
+    middleware: ['auth'],
+  },
 
 }

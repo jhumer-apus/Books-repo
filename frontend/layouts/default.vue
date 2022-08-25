@@ -14,13 +14,13 @@ import SideNav from '~/components/SideNav.vue';
 import Body from '~/components/Body.vue';
 
 export default {
-    components:{
+  components:{
     Header,
     SideNav,
     Body,
     Footer
-}
-
+},
+  
 }
 </script>
 

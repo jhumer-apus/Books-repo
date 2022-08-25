@@ -31,7 +31,7 @@ export default {
       getData: async function(){
         try{
 
-          const res = await axios.get("http://127.0.0.1:8000/api/books/" + this.$route.params.name)
+          const res = await this.$axios.get("/books/" + this.$route.params.name)
           const [book] = res.data
         
           this.book = book

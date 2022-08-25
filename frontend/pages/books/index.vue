@@ -39,7 +39,7 @@ export default {
       getData: async function(){
         try{
 
-          const res = await axios.get("/books")
+          const res = await this.$axios.get("/books")
           this.books = res.data
 
         }catch(err){

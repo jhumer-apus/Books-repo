@@ -32,7 +32,7 @@ export default {
   methods:{
     update: async function(bookName){
 
-      await axios.put("http://127.0.0.1:8000/api/books", 
+      await this.$axios.put("/books", 
         {
           id:this.book.id,
           name:bookName
@@ -41,7 +41,7 @@ export default {
     },
 
     delete_: async function(){
-      await axios.delete("http://127.0.0.1:8000/api/books/" + this.book.id)
+      await this.$axios.delete("/books/" + this.book.id)
       this.$emit('delete')
     }
   }
